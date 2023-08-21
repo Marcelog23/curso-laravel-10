@@ -17,7 +17,9 @@
                 <td>{{$suporte->ds_assunto}}</td>
                 <td>{{$suporte->id_status}}</td>
                 <td>{{$suporte->ds_texto}}</td>
-                <td></td>
+                <td>
+                   <a href="{{route('suporte.show', $suporte->id)}}"> Editar </a>
+                </td>
             </tr>
         @endforeach
     </tbody>

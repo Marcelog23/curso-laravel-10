@@ -25,6 +25,13 @@ class SuporteController extends Controller
         $data['id_status'] = 'a';
         Suporte::create($data);
 
-        return redirect()->route('suporte.index');
+        return redirect()->route('admin.suporte.index');
+    }
+
+    public function show(string|int $id)
+    {
+        $suporte = Suporte::find($id);
+
+        return view('admin.suporte.show', compact('suporte'));
     }
 }
