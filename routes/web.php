@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/suporte', [SuporteController::class, 'index'])->name('suporte.index');
+Route::get('/suporte/create', [SuporteController::class, 'create'])->name('suporte.create');
+Route::post('/suporte/create', [SuporteController::class, 'store'])->name('suporte.store');
 
 Route::get("/contato", [SiteController::class, "index"]);
 
