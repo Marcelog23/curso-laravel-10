@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\{SuporteController};
+use App\Http\Controllers\Site\SiteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/suporte', [SuporteController::class, 'index'])->name('suporte.index');
+
+Route::get("/contato", [SiteController::class, "index"]);
 
 Route::get('/', function () {
     return view('welcome');
